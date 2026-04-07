@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>ObeyK9 - Gonçalo Franco - Cane Corso Specialist Algarve</title>
+</head>
+<body>
+    <nav>
+        <div class="nav-logo-container">
+            <img src="{{ url_for('static', filename='logo_obeyk9.png.png.png') }}" alt="ObeyK9 Logo">
+        </div>
+        <div>
+            <a href="/">INÍCIO</a>
+            <a href="/servicos">SERVIÇOS</a>
+            <a href="/contacto">CONTACTO</a>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <h1>Gonçalo Franco - <span> </span>  Working Dog Specialist</h1>
+        <p>"Train with purpose. Obey with pride."</p>
+        <a href="/servicos" class="btn-precos">VER TABELA DE PREÇOS</a>
+    </div>
+
+    <div class="container">
+        <div class="seccao-flex">
+            <img src="{{ url_for('static', filename='treino_foco.jpg.png') }}" alt="Gonçalo a treinar Cane Corso" class="img-flex">
+            <div class="texto-flex">
+                <h2>Paixão e Responsabilidade</h2>
+                <p>Olá! Sou o Gonçalo Franco, o treinador por trás da ObeyK9. Dedico-me exclusivamente ao treino e comportamento de cães de grande porte, com foco especial na minha paixão: o Cane Corso.</p>
+                <p>Embora seja um treinador jovem, isso traduz-se em <strong>energia inesgotável e dedicação total</strong> a cada caso. Trabalho arduamente para provar a minha responsabilidade e competência através dos resultados que vejo em cada binómio que ajudo.</p>
+                <p>O meu objetivo não é apenas ensinar comandos, mas sim construir uma comunicação clara e uma confiança inquebrável entre si e o seu cão.</p>
+            </div>
+        </div>
+    </div>
+    <footer>&copy; 2026 ObeyK9 | Loulé, Algarve | Portugal</footer>
+</body>
+</html>

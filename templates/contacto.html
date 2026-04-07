@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>ObeyK9 - Contacto e Avaliação Algarve</title>
+</head>
+<body>
+    <nav><div class="nav-logo-container"><img src="{{ url_for('static', filename='logo_obeyk9.png.png.png') }}" alt="Logo"></div><div><a href="/">INÍCIO</a><a href="/servicos">SERVIÇOS</a><a href="/contacto">CONTACTO</a></div></nav>
+
+    <div class="container" style="max-width: 700px; text-align: center;">
+        <h2 style="color: var(--azul-dark);">Marcar Avaliação / Contacto</h2>
+        <p>Preencha os dados e eu respondo-lhe o mais breve possível para agendarmos o treino do seu cão.</p>
+
+        <form action="https://formspree.io/f/xykblqkg" method="POST" style="margin-top: 40px; background: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+
+            <div class="form-grupo">
+                <label>O seu Nome Completo</label>
+                <input type="text" name="Nome do Cliente" placeholder="Ex: João Silva" required>
+            </div>
+
+            <div class="form-grupo">
+                <label>O seu Email</label>
+                <input type="email" name="email" placeholder="Ex: joao@email.com" required>
+            </div>
+
+            <div style="display: flex; gap: 20px;" class="mobile-stack">
+                <div class="form-grupo" style="flex: 1;">
+                    <label>Nome do Cão</label>
+                    <input type="text" name="Nome do Cão" placeholder="Ex: Bobby" required>
+                </div>
+                <div class="form-grupo" style="flex: 1;">
+                    <label>Raça / Idade</label>
+                    <input type="text" name="Raça e Idade" placeholder="Ex: Cane Corso, 2 anos" required>
+                </div>
+            </div>
+
+            <div class="form-grupo">
+                <label>Problemas ou Comportamentos a Corrigir</label>
+                <textarea name="Mensagem/Problemas" rows="5" placeholder="Descreva o que se passa com o seu cão (ex: puxa a trela, reatividade, ansiedade...)" required></textarea>
+            </div>
+
+            <input type="hidden" name="_subject" value="NOVO PEDIDO DE TREINO - ObeyK9">
+
+            <button type="submit" class="btn-enviar">ENVIAR PEDIDO AGORA</button>
+        </form>
+
+        <div style="margin-top: 50px;">
+            <p><strong>Telemóvel:</strong> +351 961 644 052</p>
+            <p><strong>Instagram:</strong> <a href="https://www.instagram.com/obey_k9_official" style="color: var(--bege-accent); text-decoration: none; font-weight: bold;">@obey_k9_official</a></p>
+            <p><strong>Local:</strong> Loulé, Algarve</p>
+        </div>
+    </div>
+    <footer>&copy; 2026 ObeyK9</footer>
+</body>
+</html>
