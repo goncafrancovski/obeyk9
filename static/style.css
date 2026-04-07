@@ -15,14 +15,16 @@ nav { background: white; padding: 20px 8%; display: flex; justify-content: space
 nav a { text-decoration: none; color: var(--azul-dark); font-weight: 700; margin-left: 25px; transition: 0.3s; }
 nav a:hover { color: var(--bege-accent); }
 
+/* HERO */
 .hero {
-    background: url('/static/banner_goncalo.jpg.png') center/cover;
+    background: url('/static/banner_goncalo.jpg.png') center top/cover no-repeat;
     color: white;
     padding: 100px 20px;
     text-align: center;
     position: relative;
     overflow: hidden;
     z-index: 1;
+    min-height: 350px;
 }
 .hero::before {
     content: '';
@@ -51,10 +53,12 @@ nav a:hover { color: var(--bege-accent); }
 .img-flex { flex: 1; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); max-width: 45%; }
 .texto-flex { flex: 1; }
 
+/* Cards e Preços */
 .card { background: white; border: none; border-radius: 10px; padding: 25px; margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
 .item-preco { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid #ddd; font-weight: 700; }
 .price { color: var(--azul-dark); }
 
+/* Formulário de Contacto */
 .form-grupo { margin-bottom: 15px; text-align: left; }
 .form-grupo label { display: block; font-weight: 700; margin-bottom: 5px; color: var(--azul-dark); }
 .form-grupo input, .form-grupo textarea { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 5px; font-family: inherit; }
@@ -66,7 +70,8 @@ nav a:hover { color: var(--bege-accent); }
 
 footer { background: #222; color: white; text-align: center; padding: 30px; font-size: 0.9rem; }
 
-img { max-width: 100%; height: auto; } /* faz todas imagens se ajustarem */
+/* Responsividade geral */
+img { max-width: 100%; height: auto; }
 body, .container { width: 100%; box-sizing: border-box; padding: 10px; }
 
 @media (max-width: 1024px) {
@@ -78,10 +83,24 @@ body, .container { width: 100%; box-sizing: border-box; padding: 10px; }
 @media (max-width: 768px) {
     nav { flex-direction: column; gap: 10px; padding: 15px; }
     .nav-logo-container img { max-height: 100px; }
-    .seccao-flex { flex-direction: column; }
-    .img-flex { max-width: 100%; }
-    .hero { padding: 60px 15px; }
+
+    /* Página de Serviços ajusta lado a lado nos tablets grandes, empilha só em telemóveis muito pequenos */
+    .seccao-flex {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    .img-flex, .texto-flex { flex: 1 1 50%; }
+    .img-flex { max-width: 100%; height: auto; }
+
+    /* Hero ajustado para telemóvel */
+    .hero { padding: 60px 15px; min-height: 300px; background-position: center top; }
     .hero h1 { font-size: 1.6rem; }
     .hero p { font-size: 0.95rem; }
     .hero .btn-precos { padding: 10px 20px; font-size: 0.9rem; }
+}
+
+@media (max-width: 480px) {
+    /* Empilha serviços em telemóveis muito pequenos */
+    .seccao-flex { flex-direction: column; }
 }
